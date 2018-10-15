@@ -1,0 +1,29 @@
+{
+  "name": "cpuabuse-server",
+  "version": "0.0.1",
+  "description": "Server module",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha && exit $?",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpuabuse/node-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cpuabuse/node-server/issues"
+  },
+  "homepage": "https://github.com/cpuabuse/node-server#readme",
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "eslint": "^5.7.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "cpuabuse-app": "0.0.1"
+  }
+}
