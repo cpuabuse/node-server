@@ -12,7 +12,7 @@
     "url": "git+https://github.com/cpuabuse/node-server.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "",
   "bugs": {
     "url": "https://github.com/cpuabuse/node-server/issues"
   },
@@ -24,6 +24,6 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "cpuabuse-app": "0.0.4"
+    "cpuabuse-app": "0.0.5"
   }
 }

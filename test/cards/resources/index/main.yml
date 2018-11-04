@@ -1,3 +1,7 @@
 - in: raw
-- file: index.html
+- njk: index.njk
+  with:
+  - in:
+  - raw: '{"world":"world"}'
+  - out: object
 - out: raw

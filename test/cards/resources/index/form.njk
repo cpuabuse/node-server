@@ -1,0 +1,14 @@
+<div class="use_form" ng-app="useApp" ng-controller="useCtrl">
+	<p ng-model="showDetails"></p>
+	<div>{% raw %}{{question}}{% endraw %}</div>
+	<button ng-click="hideAnswer=!hideAnswer">Show/Hide Answer</button>
+	<div ng-hide="hideAnswer">{% raw %}{{answer}}{% endraw %}</div>
+	<form novalidate>
+		Rate
+		<input type="hidden" name="card_id" value="{% raw %}{{card_id}}{% endraw %}" />
+		<button ng-click="doPost(0)">0</button>
+		<button ng-click="doPost(1)">1</button>
+		<button ng-click="doPost(2)">2</button>
+		<button ng-click="doPost(3)">3</button>
+	</form>
+</div>

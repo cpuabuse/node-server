@@ -1,0 +1,168 @@
+1:
+  q: あ
+  a: a
+2:
+  q: い
+  a: i
+3:
+  q: う
+  a: u
+4:
+  q: え
+  a: e
+5:
+  q: お
+  a: o
+6:
+  q: か
+  a: ka
+7:
+  q: き
+  a: ki
+8:
+  q: く
+  a: ku
+9:
+  q: け
+  a: ke
+10:
+  q: こ
+  a: ko
+11:
+  q: さ
+  a: sa
+12:
+  q: し
+  a: shi
+13:
+  q: す
+  a: su
+14:
+  q: せ
+  a: se
+15:
+  q: そ
+  a: so
+16:
+  q: た
+  a: ta
+17:
+  q: ち
+  a: chi
+18:
+  q: つ
+  a: tsu
+19:
+  q: て
+  a: te
+20:
+  q: と
+  a: to
+21:
+  q: な
+  a: na
+22:
+  q: に
+  a: ni
+23:
+  q: ぬ
+  a: nu
+24:
+  q: ね
+  a: ne
+25:
+  q: の
+  a: no
+26:
+  q: は
+  a: ha
+27:
+  q: ひ
+  a: hi
+28:
+  q: ふ
+  a: fu
+29:
+  q: へ
+  a: he
+30:
+  q: ほ
+  a: ho
+31:
+  q: ぱ
+  a: pa
+32:
+  q: ぴ
+  a: pi
+33:
+  q: ぷ
+  a: pu
+34:
+  q: ぺ
+  a: pe
+35:
+  q: ぽ
+  a: po
+36:
+  q: ば
+  a: ba
+37:
+  q: び
+  a: bi
+38:
+  q: ぶ
+  a: bu
+39:
+  q: べ
+  a: be
+40:
+  q: ぼ
+  a: bo
+41:
+  q: ま
+  a: ma
+42:
+  q: み
+  a: mi
+43:
+  q: む
+  a: mu
+44:
+  q: め
+  a: me
+45:
+  q: も
+  a: mo
+46:
+  q: ら
+  a: ra
+47:
+  q: り
+  a: ri
+48:
+  q: る
+  a: ru
+49:
+  q: れ
+  a: re
+50:
+  q: ろ
+  a: ro
+51:
+  q: や
+  a: ya
+52:
+  q: ゆ
+  a: yu
+53:
+  q: よ
+  a: yo
+54:
+  q: わ
+  a: wa
+55:
+  q: を
+  a: o
+56:
+  q: ん
+  a: n

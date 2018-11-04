@@ -13,7 +13,7 @@ var serverSettings = {
 var latin_classes;
 
 new Promise(function(resolve){
-	latin_classes = new app.App("cards", path.resolve(__dirname, "latin_classes"), () => resolve());
+	latin_classes = new app.App("cards", path.resolve(__dirname, "cards"), () => resolve());
 }).then(function(){
 	var myServer = new server.Server(serverSettings);
 	myServer.addApp(latin_classes);

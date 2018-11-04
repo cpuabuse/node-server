@@ -1,0 +1,6 @@
+- in: raw
+- yml:
+  with:
+  - file: hiragana_english.yml
+- out: property
+  as: in

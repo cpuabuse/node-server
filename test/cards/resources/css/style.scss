@@ -1,0 +1,49 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: whitesmoke;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font: 100% $font-stack;
+  color: $primary-color;
+  min-height: 100vh;
+}
+
+header {
+  background: darkred;
+  color: whitesmoke;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  background: grey;
+  color: whitesmoke;
+}
+
+header > *, main > *, footer > * {
+  margin: auto;
+  width: 800px;
+}
+
+div.use_form{
+  border:1px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+}
+div.use_form details>summary{
+
+}
+div.use_form button{
+  /*width:50px;
+  height:50px;
+  font-size: 2rem;*/
+}

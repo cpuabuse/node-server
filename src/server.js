@@ -1,8 +1,7 @@
 // server.js
 "use strict";
-const app = require("cpuabuse-app");
 const http = require("http");
-const path = require("path");
+const url = require("url");
 
 class Server{
 	// Constructor
@@ -46,10 +45,12 @@ class Server{
 
 	getApp(path){
 		for (var route in this.routes){
+			console.log(route);
 			if(path.startsWith(route)){
 				return {
 					app: this.routes[route],
-					resource: path.slice(route.length + 1, path.length)
+					resource: url.parse(path).pathname.slice(route.length + 1, path.length),
+					query: url.parse(path, true).query
 				};
 			}
 		}
@@ -62,8 +63,9 @@ class Server{
 			let appAndResource = this.getApp(request.url);
 			let {app} = appAndResource;
 			let {resource} = appAndResource;
-			console.log(resource);
-			app.getResource(resource).then(data => response.end(data));
+			let {query} = appAndResource;
+			response.setHeader("Content-type", resource == "css" ? "text/css" : resource == "script" ? "text/javascript" : "text/html; charset=utf-8");
+			app.getResource(resource, query.value).then(data => response.end(data));
 		} catch (error){
 			if (error){
 				response.end("500: Internal server error");
