@@ -41,8 +41,25 @@ main {
 }
 
 footer {
+  border-top: 0.2em solid darkgoldenrod;
   background: grey;
+  background: url("backlit_blurred_background_close_up_plants");
   color: whitesmoke;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+footer > div {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+footer > div:last-of-type {
+  padding-top: 0.5em;
+  border-top: 0.085em solid rgba(75,75,75,0.8);
 }
 
 header > *, main > *, footer > * {
