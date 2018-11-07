@@ -5,6 +5,7 @@ $secondary-color: whitesmoke;
 * {
   padding: 0;
   margin: 0;
+  font-family:　
 }
 
 body {
@@ -18,6 +19,21 @@ body {
 header {
   background: darkred;
   color: whitesmoke;
+  border-bottom: 0.2em solid darkgoldenrod;
+}
+
+header > nav{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+header > nav > a{
+  font: 1.5em Arial, Helvetica, sans-serif;
+  margin-right: 0.5em;
+}
+header > nav > a:hover{
+  border-bottom: 0.2em solid darksalmon;
+  cursor: pointer;
 }
 
 main {

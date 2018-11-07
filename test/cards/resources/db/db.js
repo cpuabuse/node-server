@@ -9,7 +9,7 @@ async function main(resource, operation){
 	var app = resource.root.parent;
 	var workDir = await app.system.file.join(app.settings.folders.rc, resource.name);
 	var absolutePath = await app.system.file.join(app.system.rootDir, workDir);
-	var dbPath = await app.system.file.join(absolutePath, "db.db");
+	var dbPath = await app.system.file.join(absolutePath, "cards.db");
 
 	return new Promise(function(resolve, reject){
 		// Open database
@@ -18,22 +18,28 @@ async function main(resource, operation){
 				console.error(err.message);
 			}
 			console.log("Connected to database.");
+			console.log(resource);
 		});
 
 		// Analyze request
+		switch(resource.in){
+			case "japanese":
+			// for (var i in app.resources.)
+			break;
 
-		// Query
-		let sql = "SELECT * FROM words";
-
-		db.all(sql, [], (err, rows) => {
-			if (err) {
-				throw err;
-			}
-			// Close the database
-			db.close();
-
-			resolve(rows[0].q);
-		});
+			default:
+			// Query
+			let sql = "SELECT card_id FROM scores WHERE touch_date IS NOT NULL ORDER BY touch_date";
+			db.all(sql, [], (err, rows) => {
+				if (err) {
+					throw err;
+				}
+				// Close the database
+				db.close();
+				console.log(rows);
+				resolve(rows[0].card_id);
+			});
+		}
 	});
 }
 

@@ -24,6 +24,6 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "cpuabuse-app": "0.0.6"
+    "cpuabuse-app": "0.0.7"
   }
 }
