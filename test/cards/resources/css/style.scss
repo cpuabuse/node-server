@@ -5,7 +5,7 @@ $secondary-color: whitesmoke;
 * {
   padding: 0;
   margin: 0;
-  font-family:　
+  text-decoration: none;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 header {
   background: darkred;
   color: whitesmoke;
-  border-bottom: 0.2em solid darkgoldenrod;
+  border-bottom: 0.1em solid grey;
 }
 
 header > nav{
@@ -41,7 +41,7 @@ main {
 }
 
 footer {
-  border-top: 0.2em solid darkgoldenrod;
+  border-top: 0.1em solid grey;
   background: grey;
   background: url("backlit_blurred_background_close_up_plants");
   color: whitesmoke;
@@ -68,16 +68,38 @@ header > *, main > *, footer > * {
 }
 
 div.use_form{
-  border:1px solid black;
+  border:1px solid grey;
+  background: beige;
   border-radius: 5px;
   padding: 1rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
 }
-div.use_form details>summary{
+div.use_form > div{
+ font-size: 400%;
+}
 
+div.use_form > div:first-of-type{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
+
+div.use_form > *{
+  text-align: center;
+}
+
 div.use_form button{
-  /*width:50px;
-  height:50px;
-  font-size: 2rem;*/
+  font-size: 200%;
+  min-width: 3em;
+  border:1px solid grey;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 0.5em;
+  background: darksalmon;
+  color: #ffffff;
+  cursor: pointer;
 }
