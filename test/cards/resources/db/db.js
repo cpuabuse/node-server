@@ -47,7 +47,7 @@ async function main(resource, operation){
 			}
 			case undefined: {
 				// Query
-				let sql = "SELECT card_id FROM scores ORDER BY touch_date";
+				let sql = "SELECT a.*, 'a' AS src FROM (SELECT card_id FROM scores WHERE card_id IN (SELECT card_id FROM scores WHERE last_score != 3 OR last_score IS NULL ORDER BY touch_date DESC LIMIT 5) ORDER BY touch_date ASC LIMIT 1) a UNION SELECT b.*, 'b' AS src FROM (SELECT card_id FROM scores ORDER BY touch_date ASC LIMIT 1) b ORDER BY src ASC";
 				db.all(sql, [], (err, rows) => {
 					if (err) {
 						throw err;

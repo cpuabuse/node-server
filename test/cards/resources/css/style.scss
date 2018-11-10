@@ -1,5 +1,5 @@
 $font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$primary-color: black;
 $secondary-color: whitesmoke;
 
 * {
@@ -9,16 +9,15 @@ $secondary-color: whitesmoke;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font: 100% $font-stack;
   color: $primary-color;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
 header {
   background: darkred;
-  color: whitesmoke;
   border-bottom: 0.1em solid grey;
 }
 
@@ -29,6 +28,7 @@ header > nav{
 
 header > nav > a{
   font: 1.5em Arial, Helvetica, sans-serif;
+  color: whitesmoke;
   margin-right: 0.5em;
 }
 header > nav > a:hover{
