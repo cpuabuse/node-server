@@ -62,6 +62,17 @@ footer > div:last-of-type {
   border-top: 0.085em solid rgba(75,75,75,0.8);
 }
 
+footer > div dt {
+  border-bottom: 0.1rem solid rgba(255,255,255,0.8);
+  margin-bottom: 1em;
+  font-weight: bold;
+  font: 1.1em Arial, Helvetica, sans-serif;
+}
+
+footer > div dd + dd {
+  margin-top: 0.2em;
+}
+
 header > *, main > *, footer > * {
   margin: auto;
   width: 800px;
