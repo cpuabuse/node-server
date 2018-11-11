@@ -1,6 +1,21 @@
 $font-stack: Helvetica, sans-serif;
-$primary-color: black;
-$secondary-color: whitesmoke;
+// Primary colors
+$primary-font-color: whitesmoke;
+$primary-border-color: rgba(255,255,255,0.65);
+// Secondary colors
+$secondary-border-color: rgba(75,75,75,0.8);
+// Defualt colors
+$default-font-color: black;
+$default-bg-color: white;
+$default-border-color: grey;
+// Misc. colors
+$button-bg-color:darksalmon;
+$nav-bg-color: darkred;
+$form-bg-color: beige;
+// Borders
+$primary-border: 0.08em solid $primary-border-color;
+$secondary-border: 0.085em solid $secondary-border-color;
+$default-border: 0.1em solid $default-border-color;
 
 * {
   padding: 0;
@@ -10,15 +25,14 @@ $secondary-color: whitesmoke;
 
 body {
   font: 100% $font-stack;
-  color: $primary-color;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 header {
-  background: darkred;
-  border-bottom: 0.1em solid grey;
+  background: $nav-bg-color;
+  border-bottom: $default-border;
 }
 
 header > nav{
@@ -28,11 +42,11 @@ header > nav{
 
 header > nav > a{
   font: 1.5em Arial, Helvetica, sans-serif;
-  color: whitesmoke;
+  color: $primary-font-color;
   margin-right: 0.5em;
 }
 header > nav > a:hover{
-  border-bottom: 0.2em solid darksalmon;
+  border-bottom: 0.2em solid $button-bg-color;
   cursor: pointer;
 }
 
@@ -41,10 +55,9 @@ main {
 }
 
 footer {
-  border-top: 0.1em solid grey;
-  background: grey;
+  border-top: $default-border;
   background: url("backlit_blurred_background_close_up_plants");
-  color: whitesmoke;
+  color: $primary-font-color;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -57,20 +70,40 @@ footer > div {
   flex-direction: row;
 }
 
-footer > div:last-of-type {
-  padding-top: 0.5em;
-  border-top: 0.085em solid rgba(75,75,75,0.8);
+footer > div:first-of-type > div {
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
-footer > div dt {
-  border-bottom: 0.1rem solid rgba(255,255,255,0.8);
+footer > div > div:not(:last-of-type) {
+  margin-right: 1em;
+}
+
+footer > div:last-of-type {
+  padding-top: 0.5em;
+  border-top: $secondary-border;
+}
+
+footer > div dl.footer-links dt {
+  border-bottom: $primary-border;
   margin-bottom: 1em;
   font-weight: bold;
   font: 1.1em Arial, Helvetica, sans-serif;
 }
 
-footer > div dd + dd {
+footer > div dl.footer-links dd + dd {
   margin-top: 0.2em;
+}
+
+footer > div dl.footer-information dt {
+  font-weight: bolder;
+  margin-bottom: 0.01em;
+  font: 1.4em Arial, Helvetica, sans-serif;
+}
+
+footer > div dl.footer-information dd {
+  font-size: 0.8em;
+  margin-top: 0.02em;
 }
 
 header > *, main > *, footer > * {
@@ -79,8 +112,8 @@ header > *, main > *, footer > * {
 }
 
 div.use_form{
-  border:1px solid grey;
-  background: beige;
+  border: $default-border;
+  background: $form-bg-color;
   border-radius: 5px;
   padding: 1rem;
   margin-top: 1rem;
@@ -106,11 +139,11 @@ div.use_form > *{
 div.use_form button{
   font-size: 200%;
   min-width: 3em;
-  border:1px solid grey;
+  border: $default-border;
   border-radius: 5px;
   padding: 0.5em;
   margin: 0.5em;
-  background: darksalmon;
-  color: #ffffff;
+  background: $button-bg-color;
+  color: $primary-font-color;
   cursor: pointer;
 }
