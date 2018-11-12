@@ -1,7 +1,7 @@
 <header>
 	<nav ng-app="myApp"ng-controller="myCtrl">
-		<a href="index">Home</a>
+		<a ng-click="redirectMain('form')">Home</a>
 		<a ng-click="myFunc()">Reset</a>
-		<a href="about">About</a>
+		<a ng-click="redirectMain('about')">About</a>
 	</nav>
 </header>

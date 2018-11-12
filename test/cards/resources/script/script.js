@@ -40,4 +40,18 @@ app.controller('myCtrl', function($scope, $rootScope, $http) {
 		$http.get("db?value=japanese")
 		$rootScope.$broadcast('parentmethod', { message: "Hello" });
 	};
+	$scope.redirectMain = function(args) {
+		$rootScope.$broadcast('redirectMain', args);
+	};
+});
+
+app.controller('main', function($scope, $rootScope, $http) {
+	$scope.sidebar = {
+		url: "form"
+	};
+	$scope.$on('redirectMain', function (event, args) {
+		$http.get(args).then(function(response) {
+			$scope.sidebar.url = args;
+		});
+	})
 });

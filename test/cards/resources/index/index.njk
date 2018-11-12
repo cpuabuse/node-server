@@ -3,9 +3,7 @@
 	{% include "head.njk" %}
 	<body ng-app="useApp">
 		{% include "header.njk" %}
-		<main>
-			{% include "form.njk" %}
-		</main>
+		<main ng-controller="main" ng-include="sidebar.url"></main>
 		{% include "footer.njk" %}
 	</body>
 </html>
