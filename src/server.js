@@ -64,8 +64,8 @@ class Server{
 			let {app} = appAndResource;
 			let {resource} = appAndResource;
 			let {query} = appAndResource;
-			response.setHeader("Content-type", resource == "css" ? "text/css" : resource == "script" ? "text/javascript" : resource == "backlit_blurred_background_close_up_plants" || resource == "background_board_brown" ? "image/jpeg" : "text/html; charset=utf-8");
-			app.getResource(resource, query.value).then(data => resource == "backlit_blurred_background_close_up_plants" || resource == "background_board_brown" ? response.end(data, 'binary') : response.end(data));
+			response.setHeader("Content-type", resource == "css" ? "text/css" : resource == "script" ? "text/javascript" : resource == "logo" || resource == "background_board_brown" ? "image/jpeg" : "text/html; charset=utf-8");
+			app.getResource(resource, query.value).then(data => resource == "logo" || resource == "background_board_brown" ? response.end(data, 'binary') : response.end(data));
 		} catch (error){
 			if (error){
 				response.end("500: Internal server error");

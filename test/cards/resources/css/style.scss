@@ -15,9 +15,12 @@ $default-font-color: black;
 $default-bg-color: white;
 $default-border-color: grey;
 
+// Nav colors
+$nav-bg-color: white;
+$nav-font-color: darkred;
+
 // Misc. colors
 $button-bg-color:darksalmon;
-$nav-bg-color: darkred;
 $form-bg-color: beige;
 
 // Borders
@@ -52,22 +55,26 @@ ul, ol{
 
 header {
   background: $nav-bg-color;
-  border-bottom: $default-border;
 }
 
-header > nav{
+header > div > nav{
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-header > nav > a{
+header > div > nav > a{
   font: 1.5em Arial, Helvetica, sans-serif;
-  color: $primary-font-color;
+  color: $nav-font-color;
   margin-right: 0.5em;
 }
-header > nav > a:hover{
+header > div > nav > a:hover{
   border-bottom: 0.2em solid $button-bg-color;
   cursor: pointer;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
 }
 
 main {
