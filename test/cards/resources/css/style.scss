@@ -1,20 +1,28 @@
-$font-stack: Helvetica, sans-serif;
+// Fonts
+$default-font: Helvetica, sans-serif;
+$menu-font: Arial, Helvetica, sans-serif;
+$header-font: Arial, Helvetica, sans-serif;
+
 // Primary colors
 $primary-font-color: whitesmoke;
 $primary-border-color: rgba(255,255,255,0.65);
+
 // Secondary colors
-$secondary-border-color: rgba(75,75,75,0.8);
-// Defualt colors
+$secondary-border-color: rgba(120,120,120,0.8);
+
+// Default colors
 $default-font-color: black;
 $default-bg-color: white;
 $default-border-color: grey;
+
 // Misc. colors
 $button-bg-color:darksalmon;
 $nav-bg-color: darkred;
 $form-bg-color: beige;
+
 // Borders
 $primary-border: 0.08em solid $primary-border-color;
-$secondary-border: 0.085em solid $secondary-border-color;
+$secondary-border: 0.08em solid $secondary-border-color;
 $default-border: 1px solid $default-border-color;
 
 * {
@@ -24,10 +32,22 @@ $default-border: 1px solid $default-border-color;
 }
 
 body {
-  font: 100% $font-stack;
+  font: 1em $default-font;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: 0.5em;
+  font-family: $header-font;
+}
+p{
+  margin: 0.5em;
+}
+ul, ol{
+  list-style-position: inside;
+  margin-left:0.5em;
 }
 
 header {
@@ -52,11 +72,13 @@ header > nav > a:hover{
 
 main {
   flex-grow: 1;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 footer {
   border-top: $default-border;
-  background: url("backlit_blurred_background_close_up_plants");
+  background: url("background_board_brown");
   color: $primary-font-color;
   background-size: cover;
   display: flex;
@@ -81,29 +103,40 @@ footer > div > div:not(:last-of-type) {
 
 footer > div:last-of-type {
   padding-top: 0.5em;
+  font-size: 0.9em;
+  font-weight: lighter;
   border-top: $secondary-border;
+  justify-content: space-between;
+}
+
+footer > div dl.footer-links *{
+  font-family: $menu-font;
 }
 
 footer > div dl.footer-links dt {
   border-bottom: $primary-border;
   margin-bottom: 1em;
   font-weight: bold;
-  font: 1.1em Arial, Helvetica, sans-serif;
+  font-size: 1em;
 }
 
 footer > div dl.footer-links dd + dd {
   margin-top: 0.2em;
 }
 
+footer > div dl.footer-information i {
+  margin-right: 0.2em;
+}
+
 footer > div dl.footer-information dt {
   font-weight: bolder;
   margin-bottom: 0.01em;
-  font: 1.4em Arial, Helvetica, sans-serif;
+  font: 1.4em $menu-font;
 }
 
 footer > div dl.footer-information dd {
   font-size: 0.8em;
-  margin-top: 0.02em;
+  margin-top: 0.04em;
 }
 
 header > *, main > *, footer > * {
@@ -116,8 +149,6 @@ div.use_form{
   background: $form-bg-color;
   border-radius: 5px;
   padding: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   display:flex;
   flex-direction: column;
   align-items: stretch;
