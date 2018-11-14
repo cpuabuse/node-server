@@ -2,6 +2,7 @@
 $default-font: Helvetica, sans-serif;
 $menu-font: Arial, Helvetica, sans-serif;
 $header-font: Arial, Helvetica, sans-serif;
+$logo-font: "Comic Sans MS", cursive, sans-serif;
 
 // Primary colors
 $primary-font-color: whitesmoke;
@@ -11,17 +12,20 @@ $primary-border-color: rgba(255,255,255,0.65);
 $secondary-border-color: rgba(120,120,120,0.8);
 
 // Default colors
-$default-font-color: black;
+$default-font-color: #111;
 $default-bg-color: white;
 $default-border-color: grey;
 
 // Nav colors
 $nav-bg-color: white;
-$nav-font-color: darkred;
+$nav-font-color: steelblue;
+$nav-accent-color: steelblue;
+$logo-font-color: mediumseagreen;
 
-// Misc. colors
-$button-bg-color:darksalmon;
-$form-bg-color: beige;
+// Form colors
+$button-bg-color:steelblue;
+$button-font-color:white;
+$form-bg-color: aliceblue;
 
 // Borders
 $primary-border: 0.08em solid $primary-border-color;
@@ -55,6 +59,9 @@ ul, ol{
 
 header {
   background: $nav-bg-color;
+  background-size: cover;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 header > div > nav{
@@ -63,23 +70,41 @@ header > div > nav{
 }
 
 header > div > nav > a{
-  font: 1.5em Arial, Helvetica, sans-serif;
+  font: 1.4em Arial, Helvetica, sans-serif;
+  font-weight: bold;
   color: $nav-font-color;
   margin-right: 0.5em;
 }
 header > div > nav > a:hover{
-  border-bottom: 0.2em solid $button-bg-color;
+  border-bottom: 0.1em solid $nav-accent-color;
   cursor: pointer;
 }
 
 header > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+header>div>a:hover{
+  cursor:pointer;
+}
+
+header>div>a{
+  display:flex;
+  align-items: center;
+}
+
+header span{
+  font: 1.4em $logo-font;
+  margin-left: 0.5em;
+  color: $logo-font-color;
+  font-weight: bold;
 }
 
 main {
   flex-grow: 1;
-  margin-top: 1em;
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
@@ -124,7 +149,7 @@ footer > div dl.footer-links dt {
   border-bottom: $primary-border;
   margin-bottom: 1em;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 footer > div dl.footer-links dd + dd {
@@ -152,7 +177,6 @@ header > *, main > *, footer > * {
 }
 
 div.use_form{
-  border: $default-border;
   background: $form-bg-color;
   border-radius: 5px;
   padding: 1rem;
@@ -175,13 +199,13 @@ div.use_form > *{
 }
 
 div.use_form button{
+  border: none;
   font-size: 200%;
-  min-width: 3em;
-  border: $default-border;
+  min-width: 2.5em;
   border-radius: 5px;
   padding: 0.5em;
   margin: 0.5em;
   background: $button-bg-color;
-  color: $primary-font-color;
+  color: $button-font-color;
   cursor: pointer;
 }
