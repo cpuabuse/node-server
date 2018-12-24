@@ -4,3 +4,5 @@ folders:
   nunjucks: "njk"
   markdown: "md"
   rc: "resources"
+  db: "db"
+  file: "file"

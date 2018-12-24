@@ -1,0 +1,6 @@
+# Various settings to load
+settings:
+events:
+app:
+behaviors:
+endpoints:

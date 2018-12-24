@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/cpuabuse/node-server#readme",
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
     "coveralls": "^3.0.2",
-    "eslint": "^5.8.0",
+    "eslint": "^5.10.0",
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "cpuabuse-app": "0.0.7"
+    "cpuabuse-app": "^0.1.0"
   }
 }
