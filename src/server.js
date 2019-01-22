@@ -12,7 +12,7 @@ class Server{
 		this.settings = settings; // Set settings
 	}
 
-	startServer (){
+	startServer(){
 		// Create server
 		this.server = http.createServer((request, response) => this.processRequest(request, response));
 
@@ -26,6 +26,10 @@ class Server{
 		this.server.on('clientError', (err, socket) => {
 			socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
 		});
+	}
+
+	stopServer(){
+		this.server.close();
 	}
 
 	addApp(app){
@@ -65,7 +69,7 @@ class Server{
 			let {resource} = appAndResource;
 			let {query} = appAndResource;
 			response.setHeader("Content-type", resource == "css" ? "text/css" : resource == "script" ? "text/javascript" : resource == "logo" || resource == "background_board_brown" ? "image/jpeg" : "text/html; charset=utf-8");
-			app.getResource(resource, query.value).then(data => resource == "logo" || resource == "background_board_brown" ? response.end(data, 'binary') : response.end(data));
+			app.getResource(resource, query.value).then(data => resource == "logo" || resource == "background_board_brown" ? response.end(data.data, 'binary') : response.end(data.data));
 		} catch (error){
 			if (error){
 				response.end("500: Internal server error");
